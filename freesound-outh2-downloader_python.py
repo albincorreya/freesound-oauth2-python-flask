@@ -1,4 +1,7 @@
-#!/usr/bin/env python
+# A python web server oauth2 authorization for freesound.org
+
+# optimised from kemitche's repository https://gist.github.com/kemitche/9749639
+
 from flask import Flask, abort, request
 from uuid import uuid4
 import requests
@@ -11,7 +14,7 @@ CLIENT_SECRET = "YOUR CLIENT_SECRET HERE"
 
 # AUTHORIZE_URL = "https://www.freesound.org/apiv2/oauth2/authorize/"
 # ACCESS_TOKEN_URL = "https://www.freesound.org/apiv2/oauth2/access_token/"
-# REDIRECT_URI = "http://localhost:65010/freesound_callback"
+# REDIRECT_URI = "http://localhost:5000/freesound_callback"
 
 
 def user_agent():
@@ -85,13 +88,14 @@ def save_access_token(access_token):
     doc = open("access_token","w")
     doc.write(access_token)
     doc.close()
-    fs_downloader(access_token,"SOUND_ID")
+    # call the function to download the sound file by providing access token  freesound sound_id as an argument.
+    fs_downloader(access_token,"SOUND_ID") # replace SOUND_ID with freesound sound_id you want to download
     return
 
 
 def fs_downloader(access_token,sound_id):
     download_uri = "https://www.freesound.org/apiv2/sounds/" + sound_id + "/download/"
-    filename = "/freesound_download/" + sound_id + ".wav"
+    filename = "/freesound_download/" + sound_id + ".wav" # modify here to save the audio file to an different directory
     headers = base_headers()
     headers.update({"Authorization": "bearer " + access_token})
     response = requests.get(download_uri, headers=headers, stream=True)
@@ -100,14 +104,13 @@ def fs_downloader(access_token,sound_id):
     print response.headers
     print response.headers['Content-Length'], "\n"
     print response.url,"\n\n" 
+    # writing audio file to disk 
     with open(filename, 'wb') as fd:
         for chunk in response.iter_content(response.headers['Content-Length']>100):
             fd.write(chunk)
     print "\n Download completed ......"
     return 
 
-
-#65010
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
