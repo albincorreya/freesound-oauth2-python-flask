@@ -7,6 +7,7 @@ from uuid import uuid4
 import requests
 import requests.auth
 import urllib
+import re
 
 
 CLIENT_ID = "YOUR CLIENT_ID HERE"
