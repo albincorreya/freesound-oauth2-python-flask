@@ -95,17 +95,17 @@ def save_access_token(access_token):
 
 def fs_downloader(access_token,sound_id):
     download_uri = "https://www.freesound.org/apiv2/sounds/" + sound_id + "/download/"
-    filename = "/freesound_download/" + sound_id + ".wav" # modify here to save the audio file to an different directory
+    filepath = "/freesound_download/" # modify here to save the audio file to an different directory
     headers = base_headers()
     headers.update({"Authorization": "bearer " + access_token})
     response = requests.get(download_uri, headers=headers, stream=True)
-    print "\n\n",response.raise_for_status()
-    print response.encoding
     print response.headers
-    print response.headers['Content-Length'], "\n"
+    file_string = response.headers['Content-Disposition']
+    filename = str(re.findall(r'"([^"]*)"', file_string)).strip('[]')
+    filename = filename[1:-1] #stripping first and last character of the string
     print response.url,"\n\n" 
     # writing audio file to disk 
-    with open(filename, 'wb') as fd:
+    with open(filepath+filename, 'wb') as fd:
         for chunk in response.iter_content(response.headers['Content-Length']>100):
             fd.write(chunk)
     print "\n Download completed ......"
