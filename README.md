@@ -12,15 +12,15 @@ Code optimised from [kemitche's repository](https://gist.github.com/kemitche/974
 
 3. Open terminal and navigate to your working directory and run the code.
 
-  # In Mac
+  In Mac
 
-  $ export FLASK_APP=freesound_oauth2.py
-  $ flask run
-  
-  # Windows
-   
-   $ export FLASK_APP=freesound_oauth2.py
-   $ python -m flask run
+      $ export FLASK_APP=freesound_oauth2.py
+      $ flask run
+
+      Windows
+
+      $ export FLASK_APP=freesound_oauth2.py
+      $ python -m flask run
  
  4. Open your web browser with url http://localhost:5000 and authorise your app.
  
