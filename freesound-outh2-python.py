@@ -19,7 +19,7 @@ CLIENT_SECRET = "YOUR CLIENT_SECRET HERE"
 
 
 def user_agent():
-    return "freesound oauth2-sample-web-app"
+    return "freesound oauth2-sample-web-app" # add whatever info you need
 
 def base_headers():
     return {"User-Agent": user_agent()}
@@ -85,12 +85,13 @@ def get_username(access_token):
     return me_json['name']
 
 def save_access_token(access_token):
-    # save your access_token as a .txt file in your working directory
-    doc = open("access_token","w")
-    doc.write(access_token)
-    doc.close()
-    # call the function to download the sound file by providing access token  freesound sound_id as an argument.
-    fs_downloader(access_token,"SOUND_ID") # replace SOUND_ID with freesound sound_id you want to download
+    # [OPTIONAL] save your access_token as a .txt file to your working directory
+#     doc = open("access_token","w")
+#     doc.write(access_token)
+#     doc.close()
+
+    # call the function to download the sound file by providing access token and freesound sound_id as arguments.
+    fs_downloader(access_token,"SOUND_ID") # replace SOUND_ID with freesound sound_id 
     return
 
 
