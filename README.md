@@ -4,7 +4,7 @@ A simple web app based on flask and python to download original sound files from
 Code optimised from [kemitche's repository](https://gist.github.com/kemitche/9749639).
 
 
-Setup
+# Setup
 
 1. Apply for your freesound API key from [here](http://freesound.org/apiv2/apply/) and to the code
 
@@ -12,20 +12,19 @@ Setup
 
 3. Open terminal and navigate to your working directory and run the code.
 
-   MAC
+  # In Mac
 
   $ export FLASK_APP=freesound_oauth2.py
   $ flask run
   
-   Windows
+  # Windows
    
    $ export FLASK_APP=freesound_oauth2.py
    $ python -m flask run
  
  4. Open your web browser with url http://localhost:5000 and authorise your app.
  
- 
-
+_________________________
  
  Read more about flask [here](http://flask.pocoo.org/docs/0.12/quickstart/#a-minimal-application)
    
