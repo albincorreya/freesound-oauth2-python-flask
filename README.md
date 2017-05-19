@@ -17,7 +17,7 @@ Code optimised from [kemitche's repository](https://gist.github.com/kemitche/974
       $ export FLASK_APP=freesound_oauth2.py
       $ flask run
 
-      Windows
+  In Windows
 
       $ export FLASK_APP=freesound_oauth2.py
       $ python -m flask run
