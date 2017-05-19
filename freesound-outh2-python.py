@@ -106,7 +106,7 @@ def fs_downloader(access_token,sound_id):
     filename = str(re.findall(r'"([^"]*)"', file_string)).strip('[]')
     filename = filename[1:-1] #stripping first and last character of the string
     print response.url,"\n\n" 
-    # writing audio file to disk 
+    # write audio file to disk by iterating over the json response 
     with open(filepath+filename, 'wb') as fd:
         for chunk in response.iter_content(response.headers['Content-Length']>100):
             fd.write(chunk)
