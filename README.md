@@ -6,11 +6,13 @@ Code optimised from [kemitche's repository](https://gist.github.com/kemitche/974
 
 # Setup
 
-1. Apply for your freesound API key from [here](http://freesound.org/apiv2/apply/) and to the code
+1. Install dependencies for requirements.txt. Ideally create a virtualenv and install the requirements
 
-2. [IMPORTANT] Set your "callback_url" as http://localhost:5000/freesound_callback
+2. Apply for your freesound API key from [here](http://freesound.org/apiv2/apply/) and to the code
 
-3. Open terminal and navigate to your working directory and run the code.
+3. [IMPORTANT] Set your "callback_url" as http://localhost:5000/freesound_callback
+
+4. Open terminal and navigate to your working directory and run the code.
 
   In Mac
 
@@ -22,7 +24,7 @@ Code optimised from [kemitche's repository](https://gist.github.com/kemitche/974
       $ export FLASK_APP=freesound_oauth2.py
       $ python -m flask run
  
- 4. Open your web browser with url http://localhost:5000 and authorise your app.
+ 5. Open your web browser with url http://localhost:5000 and authorise your app.
  
 _________________________
  
