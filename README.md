@@ -8,7 +8,7 @@ Code optimised from [kemitche's repository](https://gist.github.com/kemitche/974
 
 1. Install dependencies from requirements.txt. Ideally create a [virtualenv](http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/) and install the requirements
 
-2. Apply for your freesound API key from [here](http://freesound.org/apiv2/apply/) and to the code
+2. Apply for your freesound API key from [here](http://freesound.org/apiv2/apply/) and update it in the code
 
 3. [IMPORTANT] Set your "callback_url" as http://localhost:5000/freesound_callback
 
