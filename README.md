@@ -6,7 +6,7 @@ Code optimised from [kemitche's repository](https://gist.github.com/kemitche/974
 
 # Setup
 
-1. Install dependencies for requirements.txt. Ideally create a virtualenv and install the requirements
+1. Install dependencies from requirements.txt. Ideally create a virtualenv and install the requirements
 
 2. Apply for your freesound API key from [here](http://freesound.org/apiv2/apply/) and to the code
 
