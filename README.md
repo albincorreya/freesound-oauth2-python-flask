@@ -26,5 +26,5 @@ Code optimised from [kemitche's repository](https://gist.github.com/kemitche/974
  
 _________________________
  
- Read more about flask [here](http://flask.pocoo.org/docs/0.12/quickstart/#a-minimal-application)
+ Find flask documentation [here](http://flask.pocoo.org/docs/0.12/quickstart/#a-minimal-application)
    
