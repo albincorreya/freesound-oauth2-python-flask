@@ -4,7 +4,7 @@ A simple web app based on flask and python to download original sound files from
 Code optimised from [kemitche's repository](https://gist.github.com/kemitche/9749639).
 
 
-# Setup
+## Setup
 
 1. Install dependencies from requirements.txt. Ideally create a [virtualenv](http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/) and install the requirements
 
