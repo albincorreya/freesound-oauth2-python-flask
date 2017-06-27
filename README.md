@@ -1,5 +1,7 @@
 # freesound-oauth2-python-flask
-A simple web app based on flask and python to download original sound files from freesound.org using oauth2 authorization
+A simple web app based on flask and python to download original sound files from freesound.org using oauth2 authorization.
+
+NOTE : If you want to much more sophiscated search, filtering and effective download use the [freesound-python client library](https://github.com/MTG/freesound-python), you can also some find some simple cases in the repo. An oauth2 example can be found [here](https://github.com/albincorreya/smc_masterthesis2017/blob/master/fs_text_search_oauth2downloader.py).
 
 Code optimised from [kemitche's repository](https://gist.github.com/kemitche/9749639).
 
